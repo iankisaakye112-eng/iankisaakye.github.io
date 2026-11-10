@@ -1,0 +1,26 @@
+.identity{display:flex;align-items:center;gap:1.2rem;padding:1.4rem 6%;border-block:1px solid var(--line);background:var(--paper);color:var(--ink)}
+.identity img{width:5rem;height:6rem;object-fit:cover;object-position:50% 30%;display:block}
+.identity strong,.identity small,.members .registration{display:block}
+.identity strong{font:600 clamp(1rem,2vw,1.6rem) Georgia,serif}
+.identity small,.registration,.caption-note{font-size:.88rem}
+.members .member-photo{width:100%;height:clamp(170px,19vw,320px);object-fit:cover;object-position:center 30%;margin-bottom:1rem}
+.members h3{font-size:clamp(1.35rem,2vw,2rem)}
+.members .registration{margin:.35rem 0 0}
+.fieldnotes{border-top:1px solid var(--line)}
+.fieldnotes h2{margin-top:.6rem}
+.fieldnotes .photo-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr));gap:1.3rem;margin:1.8rem 0}
+.fieldnotes figure{max-width:34rem;margin:1.4rem 0}
+.photo-grid figure{margin:0}
+.fieldnotes img{display:block;width:100%;height:clamp(220px,29vw,330px);object-fit:contain;background:color-mix(in srgb,var(--paper) 90%,var(--ink))}
+.fieldnotes figcaption{margin-top:.6rem;font:italic 1rem/1.4 Georgia,serif}
+.journal-note,.study{border-top:1px solid var(--line);padding:1rem 0;margin-top:1rem;max-width:65ch}
+.journal-note summary{font-weight:650;cursor:pointer}
+.journal-note p,.study p{margin-top:.75rem}
+.ian .fieldnotes:nth-last-child(2){border-left:1rem solid #254bcc}
+.shuraifah .study{border-left:3px double var(--line);padding-left:1.5rem}
+.martin .fieldnotes .photo-grid{max-width:58rem}
+.enquiry input,.enquiry select{width:100%;font:inherit;padding:.65rem;color:var(--ink);background:var(--paper);border:1px solid var(--line)}
+.enquiry label:not(:first-child){margin-top:1rem}
+.enquiry output{display:block;white-space:pre-line;overflow-wrap:anywhere;margin-top:1rem}
+.ian .sketches .crop{object-fit:contain;object-position:center;filter:none;background:#dedcd3}
+@media(max-width:600px){.members .member-photo{height:240px}.identity img{width:4rem;height:5rem}}

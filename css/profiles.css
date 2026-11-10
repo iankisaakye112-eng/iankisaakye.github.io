@@ -1,0 +1,115 @@
+/* Shared navigation, spacing and form behaviour. */
+:root{scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;color:var(--ink);background:var(--paper);font:1rem/1.65 "Segoe UI",Arial,sans-serif}
+h1,h2,h3,p,figure{margin:0}
+h1,h2,h3{font-family:Georgia,serif;line-height:1.06;font-weight:400;text-wrap:balance}
+h1{font-size:clamp(4.15rem,8.5vw,9.2rem);letter-spacing:-.065em}
+h2{font-size:clamp(2.25rem,4.1vw,4.8rem);letter-spacing:-.055em;margin-bottom:1.1rem}
+h3{font-size:1.65rem;letter-spacing:-.03em}
+p{max-width:65ch}
+p+p{margin-top:1em}
+a{color:inherit;text-decoration-thickness:1px;text-underline-offset:.3em}
+a:hover{text-decoration:underline}
+a:focus-visible,button:focus-visible,summary:focus-visible,textarea:focus-visible{outline:3px solid currentColor;outline-offset:4px}
+nav,footer{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1.15rem max(5%,calc((100vw - 1440px)/2));border-bottom:1px solid var(--line);font-size:.9rem}
+nav a,footer a{text-decoration:none}
+nav div{display:flex;flex-wrap:wrap;gap:clamp(.8rem,2.7vw,2.8rem)}
+nav [aria-current]{font-weight:700;text-decoration:underline}
+.home{white-space:nowrap}.home b{display:inline-grid;place-items:center;letter-spacing:-.09em;font:900 1.05rem/1 Arial,sans-serif;background:var(--ink);color:var(--paper);height:2.1rem;width:2.1rem;border-radius:50%;margin-right:.45rem}
+.skip{position:absolute;left:1rem;top:-6rem;background:white;color:black;padding:.5rem;z-index:10}.skip:focus{top:1rem}
+main{max-width:1600px;margin:auto}
+section,.mast{padding:clamp(3rem,6.5vw,7rem) 6%}
+.eyebrow,figcaption,small{font-family:"Segoe UI",Arial,sans-serif;font-size:.73rem;letter-spacing:.12em;font-weight:650;text-transform:uppercase}
+.eyebrow{display:block;margin-bottom:1.35rem}
+.hero-copy>p{max-width:39ch;margin:1.5rem 0;font-size:1.09rem}
+.jump{display:inline-block;font-weight:650;padding:.5rem 0}
+.art{width:100%;height:auto;display:block}
+figcaption{margin-top:.55rem}
+.story,.kitchen-story,.studio-notes{display:grid;grid-template-columns:1fr 1.3fr;gap:1rem 7%}
+.story .eyebrow,.kitchen-story .eyebrow{grid-column:1/-1}
+.collection>p,.fashion-edit>p,.menu>p,.gallery>p{margin-bottom:2rem}
+.tiles,.sketches{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.25rem}
+.tiles p,.courses p,.swatches p{margin-top:.5rem}
+.enquiry{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem 8%;border-top:1px solid var(--line)}
+.contact-note{font-size:.9rem}.enquiry label{display:block;font-weight:650;margin-bottom:.5rem}
+textarea{width:100%;resize:vertical;font:inherit;border:1px solid var(--line);border-radius:2px;padding:.7rem;background:var(--paper);color:var(--ink)}
+button{font:600 .95rem "Segoe UI",Arial,sans-serif;padding:.9rem 1.3rem;border:1px solid var(--ink);border-radius:2px;background:var(--ink);color:var(--paper);cursor:pointer}
+button:hover{filter:brightness(1.16)}.status{margin-top:.7rem;font-size:.9rem}
+footer{border-top:1px solid var(--line);border-bottom:0;padding-block:1.65rem}
+/* Fragrance boutique */
+.sumayiya{--paper:#fff8f0;--ink:#592b36;--line:#be9688}
+.sumayiya nav{background:#fff1e9}.sumayiya nav [aria-current]{color:#85364c}
+.perfume{background:radial-gradient(ellipse at 80% 30%,#f7c8bb 0,transparent 52%),linear-gradient(125deg,#fff9ee,#f3d8cf);display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:5%;padding-block:4%}
+.perfume h1 em{color:#94475c}
+.perfume figure{max-width:35rem;margin-inline:auto;text-align:center}
+.perfume .art{aspect-ratio:1/1;object-fit:cover;border-radius:48% 48% 1rem 1rem;border:1px solid #b68174;box-shadow:0 12px 40px #854a4918}
+.sumayiya .story{border-bottom:1px solid var(--line)}
+.scents article{position:relative;overflow:hidden;padding:2rem;background:#f7e4c0;border-top:3px solid #ae8050}
+.scents article:nth-child(2){background:#f6dada;border-color:#b77680}.scents article:nth-child(3){background:#e6d8c8;border-color:#926950}
+.scents article>span{font:italic 3rem Georgia,serif;display:block;opacity:.6;margin-bottom:1.2rem}
+.collection small,.fashion-edit small,.menu>small{display:block;margin-top:1rem}
+.closing{text-align:center;background:#efd6d0}.closing p{margin:auto;max-width:52ch}
+/* Fashion journal */
+.shuraifah{--paper:#fbf7ec;--ink:#1c4537;--line:#a89b7f}
+.shuraifah nav{background:#173f33;color:#fff8e9}
+.shuraifah .home b{background:#eee5cc;color:#173f33}
+.fashion{padding-top:1.3rem;border-bottom:1px solid var(--line)}
+.atelier-label{text-align:center;letter-spacing:.32em;font:500 clamp(2.2rem,6vw,6rem)/1.2 Georgia,serif;letter-spacing:.18em;border-bottom:1px solid var(--line);padding-bottom:1.5rem}
+.atelier-label span{display:block;font:600 .67rem/2 Arial,sans-serif;text-transform:uppercase;letter-spacing:.28em}
+.fashion-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:9%;align-items:center;padding-top:3rem}
+.fashion figure{padding:1.1rem;border:1px solid var(--line);position:relative}
+.fashion figure:before{content:"";position:absolute;width:1.6rem;height:1.6rem;top:-.85rem;right:2rem;transform:rotate(45deg);border:3px double #86784e;background:var(--paper)}
+.fashion .art{aspect-ratio:1/1;object-fit:cover}.fashion h1{font-size:clamp(3.5rem,6.7vw,7.5rem)}
+.letter{max-width:56rem;margin:auto;padding-inline:6%;font-family:Georgia,serif;font-size:1.19rem}
+.fashion-edit{background:#eae3d1}
+.swatches{display:grid;gap:1rem}
+.swatches article{display:flex;gap:2rem;align-items:center;border-top:1px solid var(--line);padding-top:1rem}
+.swatch{flex:none;width:5rem;height:5rem;background:repeating-linear-gradient(130deg,#294e40 0,#365c4a 2px,#294e40 4px)}
+.s1{background:repeating-linear-gradient(12deg,#ac9780 0,#baa68d 2px,#ac9780 5px)}.s2{background:repeating-linear-gradient(60deg,#694e40 0,#886b58 2px,#694e40 4px)}
+/* Artist's sketchbook */
+.ian{--paper:#f4f3eb;--ink:#181818;--line:#716e65}
+.ian nav{border-bottom:3px solid;align-items:stretch}.ian nav div{gap:0}.ian nav div a{padding:.3rem .8rem;border-left:1px solid}
+.ian nav [aria-current]{background:#1926b8;color:white}
+.ian h1,.ian h2,.ian h3{font-family:"Arial Black",Arial,sans-serif;font-weight:900}
+.studio{background:repeating-linear-gradient(0deg,transparent 0 23px,#b6b4ab40 24px),#f4f3eb;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:5%}
+.studio h1{text-transform:uppercase;line-height:.82}.studio h1 em{color:#202dc4;font-style:normal}
+.studio figure{transform:rotate(2deg);padding:.65rem;background:white;border:1px solid;box-shadow:.55rem .55rem 0 #242424}
+.studio .art{aspect-ratio:1/1;object-fit:cover}
+.studio .jump{background:#202dc4;color:white;padding:.55rem 1rem;text-decoration:none}
+.studio-notes{border-block:2px solid}
+.gallery{background:#242424;color:white}.sketches details{align-self:start;border:1px solid #a4a4a4;background:#f5f3e9;color:#181818}
+.sketches summary{cursor:pointer;list-style:none;overflow:hidden}.sketches summary::-webkit-details-marker{display:none}
+.crop{display:block;width:100%;height:clamp(8rem,18vw,19rem);object-fit:cover}
+.c0{object-position:center 25%;filter:grayscale(1) contrast(1.25)}.c1{object-position:60% center;transform:scaleX(-1)}.c2{object-position:center 80%;filter:grayscale(1) contrast(2)}
+.sketches summary span{display:flex;justify-content:space-between;border-top:1px solid;padding:.75rem;font-weight:750}.sketches details p{padding:0 .75rem 1rem}
+.sketches details[open] b{transform:rotate(45deg)}
+/* Culinary journal */
+.martin{--paper:#fbf4e3;--ink:#451c25;--line:#ad8977}
+.martin nav{background:#35151e;color:#fff5dc;border:0}.martin .home b{background:#fff5dc;color:#35151e}
+.kitchen{text-align:center;background:#35151e;color:#fff5dc;padding-top:2.25rem}
+.kitchen .eyebrow{color:#e1b78c;margin-bottom:1rem}
+.kitchen h1{font-size:clamp(4.4rem,9.2vw,10rem);margin-bottom:2rem}
+.kitchen figure{position:relative;max-width:60rem;margin:auto;border-block:1px solid #b68666;padding:.65rem 0}
+.kitchen .art{width:100%;height:clamp(15rem,35vw,31rem);object-fit:contain;background:#251b19}
+.kitchen-intro{max-width:50rem;margin:2.5rem auto 0}.kitchen-intro h2{font-size:2.1rem}.kitchen-intro p{margin:auto}
+.menu{background:#eee1c8;border-block:1px solid var(--line)}
+.courses{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2rem}
+.courses article{border-top:1px solid var(--line);padding:1rem 0}
+.plate{display:block;width:6.4rem;height:6.4rem;margin:0 0 1rem;border-radius:50%;border:6px double #ab9473;box-shadow:0 4px 10px #442a2119}
+.plate0{background:radial-gradient(ellipse at 45% 41%,#993d24 0 11%,transparent 12%),radial-gradient(ellipse at 63% 47%,#738444 0 14%,transparent 15%),radial-gradient(ellipse at 41% 61%,#556638 0 15%,transparent 16%),#fff8e5}
+.plate1{background:radial-gradient(ellipse at 52% 50%,#af4a2b 0 13%,transparent 14%),radial-gradient(ellipse at 42% 40%,#677043 0 10%,transparent 11%),radial-gradient(ellipse at center,#d0ac68 0 42%,#fff8e5 44%)}
+.plate2{background:radial-gradient(ellipse at 39% 49%,#d28b34 0 16%,transparent 17%),radial-gradient(ellipse at 57% 59%,#ac5552 0 14%,transparent 15%),radial-gradient(ellipse at 58% 40%,#899752 0 14%,transparent 15%),#fff8e5}
+.martin footer{background:#35151e;color:#fff5dc}
+@media(max-width:720px){
+ nav{flex-wrap:wrap}.ian nav div a{padding:.25rem .45rem}
+ .perfume,.fashion-grid,.studio,.enquiry,.story,.kitchen-story,.studio-notes{grid-template-columns:1fr}
+ .perfume figure,.studio figure{width:min(100%,30rem);margin:2rem auto 0}
+ .fashion-grid{gap:2rem}.fashion-grid figure{width:min(100%,28rem);margin:auto}
+ .tiles,.sketches,.courses{grid-template-columns:1fr}
+ .crop{height:13rem}.courses article{display:flex;align-items:center;gap:1.25rem}.plate{flex:none;margin:0}
+ .enquiry{gap:1.4rem}.enquiry h2{max-width:16ch}
+}
+@media(max-width:380px){nav{display:grid}.courses article{align-items:flex-start}.plate{width:4rem;height:4rem}}
+@media(prefers-reduced-motion:reduce){:root{scroll-behavior:auto}}
+@media(prefers-reduced-motion:no-preference){.perfume .art,.studio figure,.swatch{transition:transform .3s ease}.perfume .art:hover{transform:translateY(-3px)}.studio figure:hover{transform:rotate(0)}.swatches article:hover .swatch{transform:scale(.95)}.plate{transition:transform .3s}.courses article:hover .plate{transform:rotate(8deg)}}
